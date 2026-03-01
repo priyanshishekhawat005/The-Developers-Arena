@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Priyanshi Shekhawat</h1>
+                <p>Web Developer | Java Enthusiast</p>
+            </div>
+            <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <section id="about">
+        <img src="Profile.png" alt="My Photo">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                I am a passionate beginner web developer with knowledge of HTML, CSS,
+                JavaScript, and Java. I enjoy building simple and responsive web
+                applications and continuously improving my skills.
+            </p>
+        </div>
+    </section>
+
+    <div class="skills-container">
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>C/C++</li>
+                <li>Java</li>
+                <li>MySQL</li>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="soft-skills">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Leadership</li>
+                <li>Problem Solving</li>
+                <li>Communication</li>
+                <li>Team Collaboration</li>
+                <li>Work Ethics</li>
+            </ul>
+        </section>
+    </div>
+
+    <section id="projects">
+        <h2>Projects 💼</h2>
+
+        <div class="project">
+            <h3 class="project-title" onclick="toggleProjectDetails(this)">
+                💰 Expense Tracker <span class="toggle-icon">+</span>
+            </h3>
+            <p class="project-details">• Built a responsive Expense Tracker to record, categorize, and visualize daily expenses.<br>• Visualized spending patterns with interactive charts for better financial insights.<br>• <b>Tools and Technologies used:</b> HTML, CSS, JavaScript and Charts.js</p>
+        </div>
+
+        <div class="project">
+            <h3 class="project-title" onclick="toggleProjectDetails(this)">
+                🏩 Hotel Management System <span class="toggle-icon">+</span>
+            </h3>
+            <p class="project-details">• Developed a Hotel Management System allowing for seamless management of tasks & hotel services.<br>• Implemented room bookings, customer management and database-driven record handling.<br>• <b>Tools and Technologies used:</b> Java, Java Swing, JDBC and MySQL.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me 📞</h2>
+        <p>Email: priyanshishekhawat@gmail.com</p>
+        <p>Phone: +91 82099 52254</p>
+
+        <div class="contact-form-container">
+            <h3>Send a Message 📩</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name here" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email here" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here ..."
+                        required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div id="successMessage" class="success-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Priyanshi Shekhawat. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
