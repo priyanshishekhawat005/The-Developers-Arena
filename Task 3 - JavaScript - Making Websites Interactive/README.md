@@ -1,4 +1,4 @@
-# 🌟 Interactive Portfolio Website
+# Interactive Portfolio Website
 
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring dark mode, form validation, and interactive elements.
 
@@ -8,7 +8,7 @@ Personal portfolio website for **Priyanshi Shekhawat** - Web Developer | Java En
 
 ## ✨ Features
 
-### 🎨 Dark/Light Mode Toggle
+### ☀️ Dark/Light Mode Toggle
 - Seamless theme switching between light and dark modes
 - User preference saved in browser's localStorage
 - Smooth CSS transitions for better user experience
@@ -86,7 +86,7 @@ Task 3 - JavaScript - Making Websites Interactive/
 | `validateMessageField()` | Real-time message validation |
 | `showSuccessMessage()` | Display success notification |
 
-## 🎨 Dark Mode
+## 🌙 Dark Mode
 
 The dark mode feature uses:
 - CSS classes for theme switching
@@ -159,7 +159,3 @@ Compatible with all modern browsers:
 - [ ] Add project links and live demos
 - [ ] Include social media links
 - [ ] Add resume download button
-
----
-
-**Made with ❤️ by Priyanshi Shekhawat**
