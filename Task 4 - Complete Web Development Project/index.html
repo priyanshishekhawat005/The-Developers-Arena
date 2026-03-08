@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Saffron Table is a modern neighborhood restaurant serving seasonal dishes, handcrafted drinks, and warm hospitality."
+    />
+    <title>Saffron Table | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Saffron Table home">
+          <span class="brand-mark" aria-hidden="true">ST</span>
+          <span class="brand-text">Saffron Table</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Open navigation menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a aria-current="page" href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Farm to Flame</p>
+            <h1 id="hero-title">Neighborhood dining with bold seasonal flavor.</h1>
+            <p>
+              Saffron Table pairs local ingredients, live-fire cooking, and a cozy city-at-night atmosphere. Join us for dinner,
+              drinks, and weekend brunch.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-solid" href="booking.html">Book a Table</a>
+              <a class="btn btn-ghost" href="menu.html">Explore Menu</a>
+            </div>
+          </div>
+          <figure class="hero-media">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=70"
+              srcset="
+                https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=70 700w,
+                https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=70 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Warmly lit restaurant interior with set dining tables"
+              width="1200"
+              height="800"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="highlights" aria-labelledby="highlights-title">
+        <div class="container">
+          <h2 id="highlights-title">Why guests return</h2>
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Seasonal Ingredients</h3>
+              <p>Weekly menu updates built around fresh produce from local growers.</p>
+            </article>
+            <article class="card">
+              <h3>Chef's Counter</h3>
+              <p>Watch live-fire techniques in an open kitchen designed for conversation.</p>
+            </article>
+            <article class="card">
+              <h3>Signature Pairings</h3>
+              <p>Curated mocktails and wines selected to complement each dish.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" aria-labelledby="story-title">
+        <div class="container split-grid">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=70"
+              srcset="
+                https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=70 600w,
+                https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=70 1000w
+              "
+              sizes="(max-width: 768px) 100vw, 40vw"
+              alt="Chef plating a gourmet dish with precision"
+              width="1000"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <div>
+            <p class="eyebrow">Our Story</p>
+            <h2 id="story-title">Built for long dinners and memorable nights.</h2>
+            <p>
+              Founded in 2019, Saffron Table blends traditional cooking methods with modern presentation. We focus on food that feels
+              thoughtful without feeling formal.
+            </p>
+            <a class="text-link" href="contact.html">Contact us for private dining inquiries</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-brand">Saffron Table</p>
+          <p>135-A Defence Colony, Rajasthan, India</p>
+        </div>
+        <div>
+          <p><strong>Hours</strong></p>
+          <p>Mon-Thu: 12:00 PM - 10:30 PM</p>
+          <p>Fri-Sun: 11:00 AM - 11:30 PM</p>
+        </div>
+        <div>
+          <a href="booking.html" class="btn btn-solid">Reserve Now</a>
+        </div>
+      </div>
+      <p class="container copyright">&copy; 2026 Saffron Table. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

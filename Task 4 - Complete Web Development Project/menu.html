@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Saffron Table's seasonal menu featuring starters, mains, desserts, and handcrafted drinks."
+    />
+    <title>Saffron Table | Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Saffron Table home">
+          <span class="brand-mark" aria-hidden="true">ST</span>
+          <span class="brand-text">Saffron Table</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Open navigation menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a aria-current="page" href="menu.html">Menu</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="page-hero" aria-labelledby="menu-title">
+        <div class="container">
+          <p class="eyebrow">Our Flavors</p>
+          <h1 id="menu-title">Seasonal Menu</h1>
+          <p>All items are prepared fresh. Please inform our team about allergies before ordering.</p>
+        </div>
+      </section>
+
+      <section class="container" aria-labelledby="filter-title">
+        <h2 id="filter-title" class="sr-only">Filter menu items by category</h2>
+        <div class="menu-filters" role="tablist" aria-label="Menu categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="starter" role="tab" aria-selected="false">Starters</button>
+          <button class="filter-btn" data-filter="main" role="tab" aria-selected="false">Main Course</button>
+          <button class="filter-btn" data-filter="dessert" role="tab" aria-selected="false">Desserts</button>
+          <button class="filter-btn" data-filter="drink" role="tab" aria-selected="false">Drinks</button>
+        </div>
+
+        <div class="menu-grid" aria-live="polite">
+          <article class="menu-item" data-category="starter">
+            <figure class="menu-item-image">
+              <img
+                src="images/Charred Corn Chaat.jpg"
+                alt="Charred Corn Chaat with tamarind glaze and herb yogurt"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Charred Corn Chaat</h3>
+            <p>Smoky corn, tamarind glaze, crispy shallots, herb yogurt.</p>
+            <p class="price">Rs. 320</p>
+          </article>
+
+          <article class="menu-item" data-category="starter">
+            <figure class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=70"
+                alt="Roasted Tomato Soup with basil oil and crumble"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Roasted Tomato Soup</h3>
+            <p>Slow-roasted tomatoes, basil oil, sourdough crumble.</p>
+            <p class="price">Rs. 290</p>
+          </article>
+
+          <article class="menu-item" data-category="main">
+            <figure class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=70"
+                alt="Fire-Grilled Paneer Steak with peppers and rice pilaf"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Fire-Grilled Paneer Steak</h3>
+            <p>Pepper glaze, garlic greens, saffron rice pilaf.</p>
+            <p class="price">Rs. 620</p>
+          </article>
+
+          <article class="menu-item" data-category="main">
+            <figure class="menu-item-image">
+              <img
+                src="images/Lemon_Butter_Seabass.jpg"
+                alt="Lemon Butter Seabass with wilted spinach"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Lemon Butter Seabass</h3>
+            <p>Pan-seared fillet, wilted spinach, citrus beurre blanc.</p>
+            <p class="price">Rs. 780</p>
+          </article>
+
+          <article class="menu-item" data-category="dessert">
+            <figure class="menu-item-image">
+              <img
+                src="images/Cardamom_Creme_Brulee.jpg"
+                alt="Cardamom Creme Brulee with caramelized sugar top"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Cardamom Creme Brulee</h3>
+            <p>Classic custard, caramelized top, pistachio dust.</p>
+            <p class="price">Rs. 340</p>
+          </article>
+
+          <article class="menu-item" data-category="dessert">
+            <figure class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=70"
+                alt="Dark Chocolate Tart with ganache and berry compote"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Dark Chocolate Tart</h3>
+            <p>70% dark chocolate ganache, sea salt, berry compote.</p>
+            <p class="price">Rs. 370</p>
+          </article>
+
+          <article class="menu-item" data-category="drink">
+            <figure class="menu-item-image">
+              <img
+                src="images/Smoked_Citrus_Cooler.jpg"
+                alt="Smoked Citrus Cooler with orange and rosemary"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Smoked Citrus Cooler</h3>
+            <p>Orange, grapefruit, tonic, rosemary smoke.</p>
+            <p class="price">Rs. 260</p>
+          </article>
+
+          <article class="menu-item" data-category="drink">
+            <figure class="menu-item-image">
+              <img
+                src="images/Cold_Brew_Tonic.jpg"
+                alt="Cold Brew Tonic with coffee and lime"
+                width="500"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <h3>Cold Brew Tonic</h3>
+            <p>Single-origin cold brew, sparkling tonic, lime peel.</p>
+            <p class="price">Rs. 240</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-brand">Saffron Table</p>
+          <p>135-A Defence Colony, Rajasthan, India</p>
+        </div>
+        <div>
+          <p><strong>Hours</strong></p>
+          <p>Mon-Thu: 12:00 PM - 10:30 PM</p>
+          <p>Fri-Sun: 11:00 AM - 11:30 PM</p>
+        </div>
+        <div>
+          <a href="booking.html" class="btn btn-solid">Reserve Now</a>
+        </div>
+      </div>
+      <p class="container copyright">&copy; 2026 Saffron Table. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
