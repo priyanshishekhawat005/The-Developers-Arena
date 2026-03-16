@@ -1,0 +1,132 @@
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero__content,
+.hero__card,
+.project-card,
+.skills__panel,
+.contact__form-wrapper,
+.about__image {
+    animation: fade-in-up 800ms ease both;
+}
+
+.hero__card {
+    animation-delay: 120ms;
+}
+
+.projects__grid .project-card:nth-child(2) {
+    animation-delay: 180ms;
+}
+
+.skills__grid .skills__panel:nth-child(2) {
+    animation-delay: 100ms;
+}
+
+.about__image {
+    animation-name: portrait-float;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.button::after,
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after {
+    background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.28) 50%, transparent 80%);
+    transform: translateX(-140%);
+    transition: transform 650ms ease;
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+    transform: translateX(140%);
+}
+
+.project-card {
+    position: relative;
+}
+
+.project-card::after {
+    border-radius: inherit;
+    background: linear-gradient(180deg, transparent, rgba(15, 118, 110, 0.06));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.project-card:hover::after,
+.project-card:focus-within::after {
+    opacity: 1;
+}
+
+.site-header__menu-toggle[aria-expanded="true"] .site-header__menu-line:nth-child(1) {
+    transform: translateY(0.4rem) rotate(45deg);
+}
+
+.site-header__menu-toggle[aria-expanded="true"] .site-header__menu-line:nth-child(2) {
+    opacity: 0;
+}
+
+.site-header__menu-toggle[aria-expanded="true"] .site-header__menu-line:nth-child(3) {
+    transform: translateY(-0.4rem) rotate(-45deg);
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(1.4rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes portrait-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.45rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+    }
+}
