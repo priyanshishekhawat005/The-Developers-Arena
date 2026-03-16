@@ -1,6 +1,6 @@
-# Advanced Portfolio with CSS Grid
+# Advance CSS & Modern Layouts
 
-This portfolio project was refactored to align with Week 5 advanced CSS learning goals while preserving the original content and core sections.
+A professional, high-performance portfolio template refactored with modern CSS Grid and Flexbox architectures. This project is designed to showcase technical skills and personal projects through a mobile-first, responsive interface that emphasizes clean code and smooth user experiences.
 
 ## Project Structure
 
