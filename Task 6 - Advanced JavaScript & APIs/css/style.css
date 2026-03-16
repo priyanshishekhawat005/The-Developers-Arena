@@ -1,0 +1,387 @@
+:root {
+  --bg: linear-gradient(130deg, #f4efe6 0%, #ffe5bf 45%, #ffd7a1 100%);
+  --bg-panel: rgba(255, 255, 255, 0.84);
+  --text: #1e2128;
+  --muted: #566073;
+  --accent: #d25d2f;
+  --accent-2: #2f7996;
+  --shadow: 0 20px 45px rgba(46, 24, 16, 0.12);
+  --radius: 16px;
+}
+
+body[data-theme="coast"] {
+  --bg: linear-gradient(135deg, #eaf8ff 0%, #c8ebff 45%, #b7d6f8 100%);
+  --bg-panel: rgba(255, 255, 255, 0.82);
+  --text: #1c2e3b;
+  --muted: #456174;
+  --accent: #10647f;
+  --accent-2: #2e9668;
+  --shadow: 0 20px 45px rgba(16, 71, 94, 0.14);
+}
+
+body[data-theme="forest"] {
+  --bg: linear-gradient(140deg, #eff9ef 0%, #ddf2d7 45%, #c9e6bf 100%);
+  --bg-panel: rgba(255, 255, 255, 0.86);
+  --text: #1b2b20;
+  --muted: #42644d;
+  --accent: #286f3f;
+  --accent-2: #7e5d2f;
+  --shadow: 0 20px 45px rgba(34, 80, 38, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.015em;
+  margin: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 1000;
+  background: #fff;
+  color: #000;
+  padding: 8px;
+}
+
+.skip-link:focus {
+  left: 8px;
+}
+
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 360px;
+  height: 360px;
+  right: -100px;
+  top: -80px;
+  background: radial-gradient(circle, rgba(210, 93, 47, 0.22), rgba(210, 93, 47, 0));
+}
+
+.orb-2 {
+  width: 320px;
+  height: 320px;
+  left: -100px;
+  bottom: -100px;
+  background: radial-gradient(circle, rgba(47, 121, 150, 0.2), rgba(47, 121, 150, 0));
+}
+
+.app-shell {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 1.2rem auto 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  animation: slideIn 0.5s ease;
+}
+
+.app-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.78rem;
+}
+
+.status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.controls {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.55rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid #c9d0db;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.14s ease, opacity 0.14s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: var(--accent-2);
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.api-row {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.api-input-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.55rem;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.suggestion-btn {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  color: var(--text);
+  border: 1px solid #d4dbe6;
+}
+
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.favorite-chip {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid #d4dbe6;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+}
+
+.current-card {
+  min-height: 150px;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.city-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.temperature {
+  font-size: clamp(1.9rem, 2.3vw, 2.6rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.weather-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 0.45rem 1rem;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 0.7rem;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid #dbe2ec;
+  border-radius: 12px;
+  padding: 0.7rem;
+  display: grid;
+  gap: 0.3rem;
+  animation: popIn 0.35s ease;
+}
+
+.placeholder {
+  color: var(--muted);
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+.loading-overlay[hidden] {
+  display: none;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 0, 0, 0.15);
+  border-top-color: var(--accent);
+  animation: spin 0.9s linear infinite;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (min-width: 980px) {
+  .app-shell {
+    grid-template-columns: 370px 1fr;
+    grid-template-areas:
+      "header header"
+      "controls weather"
+      "controls forecast";
+  }
+
+  .app-header {
+    grid-area: header;
+  }
+
+  .controls {
+    grid-area: controls;
+    align-content: start;
+  }
+
+  .weather {
+    grid-area: weather;
+  }
+
+  .forecast {
+    grid-area: forecast;
+  }
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    width: min(1100px, calc(100% - 1rem));
+  }
+
+  .control-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
